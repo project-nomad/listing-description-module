@@ -1,6 +1,6 @@
-# Project Name
+# Project Nomad
 
-> Project description
+> Front End capstone project mocking a semi-functional Airbnb replica website.
 
 ## Related Projects
 
