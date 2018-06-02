@@ -6,18 +6,19 @@ DROP TABLE IF EXISTS tblListingOverview;
 DROP TABLE IF EXISTS tblAmenities;
 DROP TABLE IF EXISTS tblPictograms;
 DROP TABLE IF EXISTS tblSleepingArrangements;
+DROP TABLE IF EXISTS refAmenities;
 
 CREATE TABLE tblListingOverview (
   id INT NOT NULL AUTO_INCREMENT,
-  summary TINYTEXT NULL,
+  summary TEXT NULL,
   theSpace TEXT NULL,
-  guestAccess TINYTEXT NULL,
-  interactionWithGuests TINYTEXT NULL,
-  otherThingsToNote TINYTEXT NULL,
-  homeHighlights1 TINYTEXT NULL,
-  homeHighlights2 TINYTEXT NULL,
-  homeHighlights3 TINYTEXT NULL,
-  houseRules TINYTEXT NULL,
+  guestAccess TEXT NULL,
+  interactionWithGuests TEXT NULL,
+  otherThingsToNote TEXT NULL,
+  homeHighlights1 TEXT NULL,
+  homeHighlights2 TEXT NULL,
+  homeHighlights3 TEXT NULL,
+  houseRules TEXT NULL,
   noOfGuests INT NOT NULL DEFAULT 0,
   noOfBeds INT NOT NULL DEFAULT 0,
   noOfBedrooms INT NOT NULL DEFAULT 0,
@@ -29,9 +30,17 @@ CREATE TABLE tblAmenities (
     id INT NOT NULL AUTO_INCREMENT,
     listingID INT NOT NULL,
     pictogramID INT NOT NULL,
-    amenityName VARCHAR(100) NOT NULL,
     category VARCHAR(100) NOT NULL,
     subCategory VARCHAR(100) NOT NULL,
+    additionalComments VARCHAR(100) NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE refAmenities (
+    id INT NOT NULL AUTO_INCREMENT,
+    category VARCHAR(100) NOT NULL,
+    subCategory VARCHAR(100) NOT NULL,
+    additionalComments VARCHAR(100) NULL,
     PRIMARY KEY (ID)
 );
 

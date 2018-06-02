@@ -1,5 +1,7 @@
 ## MAC files ##
 .DS_Store
+/node_modules
+/data
 
 ## NPM ##
 npm
