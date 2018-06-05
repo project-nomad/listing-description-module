@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`shallow renders Guess Access correctly 1`] = `
+<div
+  dir="ltr"
+>
+  <styled.p>
+    <styled.span>
+      <styled.span>
+        GuestAccess
+      </styled.span>
+    </styled.span>
+  </styled.p>
+</div>
+`;
+
+exports[`shallow renders Interaction With Guests correctly 1`] = `
+<div
+  dir="ltr"
+>
+  <styled.p>
+    <styled.span>
+      <styled.span>
+        InteractionWithGuests
+      </styled.span>
+    </styled.span>
+  </styled.p>
+</div>
+`;
+
+exports[`shallow renders Other Things to Note correctly 1`] = `
+<div
+  dir="ltr"
+>
+  <styled.p>
+    <styled.span>
+      <styled.span>
+        OtherThingsToNote
+      </styled.span>
+    </styled.span>
+  </styled.p>
+</div>
+`;
+
 exports[`shallow renders theSpace correctly 1`] = `
 <div
   dir="ltr"
@@ -7,7 +49,7 @@ exports[`shallow renders theSpace correctly 1`] = `
   <styled.p>
     <styled.span>
       <styled.span>
-        left-to-right
+        TheSpace
       </styled.span>
     </styled.span>
   </styled.p>

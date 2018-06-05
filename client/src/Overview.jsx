@@ -4,6 +4,7 @@ import Styled from 'styled-components';
 import Section1 from './Section1.jsx';
 import Section2 from './Section2.jsx';
 import Section3 from './Section3.jsx';
+import Section4 from './Section4.jsx';
 
 
 const Div = Styled.div`
@@ -69,8 +70,8 @@ class Overview extends React.Component {
               <span>Other things to note</span>
             </Div>
             <Div className='the-overview'>
-              {this.props.section3.map( (paragraph, idx) => (
-                  <Section3 
+              {this.props.section4.map( (paragraph, idx) => (
+                  <Section4 
                     key={idx}
                     ltr={paragraph} 
                   />
@@ -90,4 +91,5 @@ Overview.propTypes = {
   section1: PropTypes.array.isRequired,
   section2: PropTypes.array.isRequired,
   section3: PropTypes.array.isRequired,
+  section4: PropTypes.array.isRequired,
 };

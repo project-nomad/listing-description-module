@@ -1,32 +1,35 @@
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
-import TheSpace from '../src/TheSpace.jsx';
-import InteractionWithGuest from '../src/InteractionWithGuests.jsx';
+import Section1 from '../src/Section1.jsx';
+import Section2 from '../src/Section2.jsx';
+import Section3 from '../src/Section3.jsx';
+import Section4 from '../src/Section4.jsx';
+
 
 it('shallow renders theSpace correctly', () => {
   const renderer = new ShallowRenderer();
-  renderer.render(<TheSpace ltr={"left-to-right"}/>);
+  renderer.render(<Section1 ltr={"TheSpace"}/>);
   const tree = renderer.getRenderOutput();
   expect(tree).toMatchSnapshot();
 });
 
-it('shallow renders InteractionWithGuest correctly', () => {
+it('shallow renders Guess Access correctly', () => {
   const renderer = new ShallowRenderer();
-  renderer.render(<InteractionWithGuest ltr={"testing IWG"}/>);
+  renderer.render(<Section2 ltr={"GuestAccess"}/>);
   const tree = renderer.getRenderOutput();
   expect(tree).toMatchSnapshot();
 });
 
-// it('shallow renders guestAccess correctly', () => {
-//   const renderer = new ShallowRenderer();
-//   renderer.render(<guestAccess ltr={"testing IWG"}/>);
-//   const tree = renderer.getRenderOutput();
-//   expect(tree).toMatchSnapshot();
-// });
+it('shallow renders Interaction With Guests correctly', () => {
+  const renderer = new ShallowRenderer();
+  renderer.render(<Section3 ltr={"InteractionWithGuests"}/>);
+  const tree = renderer.getRenderOutput();
+  expect(tree).toMatchSnapshot();
+});
 
-// it('shallow renders otherThingsToNote correctly', () => {
-//   const renderer = new ShallowRenderer();
-//   renderer.render(<otherThingsToNote ltr={"testing IWG"}/>);
-//   const tree = renderer.getRenderOutput();
-//   expect(tree).toMatchSnapshot();
-// });
+it('shallow renders Other Things to Note correctly', () => {
+  const renderer = new ShallowRenderer();
+  renderer.render(<Section4 ltr={"OtherThingsToNote"}/>);
+  const tree = renderer.getRenderOutput();
+  expect(tree).toMatchSnapshot();
+});
