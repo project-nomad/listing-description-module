@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 
 const P = Styled.p`
@@ -35,3 +36,7 @@ const TheSpace = (props) => (
 );
 
 export default TheSpace;
+
+TheSpace.propTypes = {
+  ltr: PropTypes.string.isRequired,
+};

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shallow renders theSpace correctly 1`] = `
+<div
+  dir="ltr"
+>
+  <styled.p>
+    <styled.span>
+      <styled.span>
+        left-to-right
+      </styled.span>
+    </styled.span>
+  </styled.p>
+</div>
+`;

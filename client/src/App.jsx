@@ -16,8 +16,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    //The space section
-    axios.get('/overview')
+
+    axios.get('/overview/listingId/1')
     .then((results) => {
       let theSpacePg = results.data[0].theSpace.split('\n\n');
       let guestAccessPg = results.data[0].guestAccess.split('\n\n');
@@ -46,7 +46,7 @@ class App extends React.Component {
               overview={this.state.overview} 
               theSpaceParagraphs={this.state.theSpace} 
               guestAccess={this.state.guestAccess}
-              interactionWithGuests={this.state.interactionWithGuests}
+              interactionSection={this.state.interactionWithGuests}
               otherThingsToNote={this.state.otherThingsToNote}
             />
           </div>

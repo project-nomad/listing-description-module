@@ -44,7 +44,7 @@ class Details extends React.Component {
               <span>Interaction with guests</span>
             </Div>
             <Div className='the-overview'>
-              {this.props.InteractionWithGuests.map( (paragraph, idx) => (
+              {this.props.interactionSection.map( (paragraph, idx) => (
                   <InteractionWithGuests 
                     key={idx}
                     ltr={paragraph} 
@@ -63,5 +63,5 @@ export default Details;
 
 Details.propTypes = {
   theSpaceParagraphs: PropTypes.array.isRequired,
-  InteractionWithGuests: PropTypes.array.isRequired,
+  interactionSection: PropTypes.array.isRequired,
 };
