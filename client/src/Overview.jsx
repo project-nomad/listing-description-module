@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 import Section1 from './Section1.jsx';
 import Section2 from './Section2.jsx';
+import Section3 from './Section3.jsx';
 
 
 const Div = Styled.div`
@@ -41,11 +42,35 @@ class Overview extends React.Component {
           </div>
           <div style={{marginTop: 16 + 'px'}} >
             <Div className='the-overview'>
-              <span>Interaction with guests</span>
+              <span>Guest access</span>
             </Div>
             <Div className='the-overview'>
               {this.props.section2.map( (paragraph, idx) => (
                   <Section2 
+                    key={idx}
+                    ltr={paragraph} 
+                  />
+                ))
+              }
+            </Div>
+            <Div className='the-overview'>
+              <span>Interaction with guests</span>
+            </Div>
+            <Div className='the-overview'>
+              {this.props.section3.map( (paragraph, idx) => (
+                  <Section3 
+                    key={idx}
+                    ltr={paragraph} 
+                  />
+                ))
+              }
+            </Div>
+            <Div className='the-overview'>
+              <span>Other things to note</span>
+            </Div>
+            <Div className='the-overview'>
+              {this.props.section3.map( (paragraph, idx) => (
+                  <Section3 
                     key={idx}
                     ltr={paragraph} 
                   />
@@ -64,4 +89,5 @@ export default Overview;
 Overview.propTypes = {
   section1: PropTypes.array.isRequired,
   section2: PropTypes.array.isRequired,
+  section3: PropTypes.array.isRequired,
 };
