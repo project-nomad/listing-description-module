@@ -8,19 +8,22 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "start-server": "nodemon server/index.js",
+    "start-server": "nodemon server/server.js",
     "test": "jest",
     "build": "npx webpack -d --watch"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "npm": "^6.1.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "styled-components": "^3.3.2"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
@@ -29,11 +32,14 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "jest": "^23.1.0",
     "nodemon": "^1.17.5",
     "react-test-renderer": "^16.4.0",
+    "superagent": "^3.8.3",
+    "supertest": "^3.1.0",
     "webpack": "^4.10.2",
     "webpack-cli": "^3.0.0"
   }
