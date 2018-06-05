@@ -5,6 +5,7 @@ import Section1 from './Section1.jsx';
 import Section2 from './Section2.jsx';
 import Section3 from './Section3.jsx';
 import Section4 from './Section4.jsx';
+import HideButton from './HideButton.jsx';
 
 
 const Div = Styled.div`
@@ -17,6 +18,11 @@ const Div = Styled.div`
     line-height: 22px !important;
     letter-spacing: normal !important;
 `;
+
+const ButtonInLineStyle = {
+  marginTop: '8px',
+  marginBottom: '24px'
+}
 
 class Overview extends React.Component {
   constructor(props) {
@@ -41,43 +47,48 @@ class Overview extends React.Component {
               }
             </Div>
           </div>
-          <div style={{marginTop: 16 + 'px'}} >
-            <Div className='the-overview'>
-              <span>Guest access</span>
-            </Div>
-            <Div className='the-overview'>
-              {this.props.section2.map( (paragraph, idx) => (
-                  <Section2 
-                    key={idx}
-                    ltr={paragraph} 
-                  />
-                ))
-              }
-            </Div>
-            <Div className='the-overview'>
-              <span>Interaction with guests</span>
-            </Div>
-            <Div className='the-overview'>
-              {this.props.section3.map( (paragraph, idx) => (
-                  <Section3 
-                    key={idx}
-                    ltr={paragraph} 
-                  />
-                ))
-              }
-            </Div>
-            <Div className='the-overview'>
-              <span>Other things to note</span>
-            </Div>
-            <Div className='the-overview'>
-              {this.props.section4.map( (paragraph, idx) => (
-                  <Section4 
-                    key={idx}
-                    ltr={paragraph} 
-                  />
-                ))
-              }
-            </Div>
+          <div style={{marginTop: '16px'}}>
+            <div>
+              <Div className='the-overview'>
+                <span>Guest access</span>
+              </Div>
+              <Div className='the-overview'>
+                {this.props.section2.map( (paragraph, idx) => (
+                    <Section2 
+                      key={idx}
+                      ltr={paragraph} 
+                    />
+                  ))
+                }
+              </Div>
+              <Div className='the-overview'>
+                <span>Interaction with guests</span>
+              </Div>
+              <Div className='the-overview'>
+                {this.props.section3.map( (paragraph, idx) => (
+                    <Section3 
+                      key={idx}
+                      ltr={paragraph} 
+                    />
+                  ))
+                }
+              </Div>
+              <Div className='the-overview'>
+                <span>Other things to note</span>
+              </Div>
+              <Div className='the-overview'>
+                {this.props.section4.map( (paragraph, idx) => (
+                    <Section4 
+                      key={idx}
+                      ltr={paragraph} 
+                    />
+                  ))
+                }
+              </Div>
+              <div>
+                <HideButton style={ButtonInLineStyle}/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
