@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Styled from 'styled-components';
-import TheSpace from './TheSpace.jsx';
-import InteractionWithGuests from './InteractionWithGuests.jsx';
+import Section1 from './Section1.jsx';
+import Section2 from './Section2.jsx';
 
 
 const Div = Styled.div`
@@ -16,7 +16,7 @@ const Div = Styled.div`
     letter-spacing: normal !important;
 `;
 
-class Details extends React.Component {
+class Overview extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -30,8 +30,8 @@ class Details extends React.Component {
               <span>The space</span>
             </Div>
             <Div className='the-overview'>
-              {this.props.theSpaceParagraphs.map( (paragraph, idx) => (
-                  <TheSpace 
+              {this.props.section1.map( (paragraph, idx) => (
+                  <Section1 
                     key={idx}
                     ltr={paragraph} 
                   />
@@ -44,8 +44,8 @@ class Details extends React.Component {
               <span>Interaction with guests</span>
             </Div>
             <Div className='the-overview'>
-              {this.props.interactionSection.map( (paragraph, idx) => (
-                  <InteractionWithGuests 
+              {this.props.section2.map( (paragraph, idx) => (
+                  <Section2 
                     key={idx}
                     ltr={paragraph} 
                   />
@@ -59,9 +59,9 @@ class Details extends React.Component {
   }
 }
 
-export default Details;
+export default Overview;
 
-Details.propTypes = {
-  theSpaceParagraphs: PropTypes.array.isRequired,
-  interactionSection: PropTypes.array.isRequired,
+Overview.propTypes = {
+  section1: PropTypes.array.isRequired,
+  section2: PropTypes.array.isRequired,
 };

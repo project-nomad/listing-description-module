@@ -25,7 +25,7 @@ const Span = Styled.span`
   -webkit-font-smoothing: antialiased;
 `;
 
-const TheSpace = (props) => (
+const Section2 = (props) => (
   <div dir='ltr'>
     <P>
       <Span>
@@ -35,8 +35,8 @@ const TheSpace = (props) => (
   </div>
 );
 
-export default TheSpace;
+export default Section2;
 
-TheSpace.propTypes = {
+Section2.propTypes = {
   ltr: PropTypes.string.isRequired,
 };

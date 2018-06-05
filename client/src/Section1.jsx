@@ -25,7 +25,7 @@ const Span = Styled.span`
   -webkit-font-smoothing: antialiased;
 `;
 
-const InteractionWithGuests = (props) => (
+const Section1 = (props) => (
   <div dir='ltr'>
     <P>
       <Span>
@@ -35,8 +35,8 @@ const InteractionWithGuests = (props) => (
   </div>
 );
 
-export default InteractionWithGuests;
+export default Section1;
 
-InteractionWithGuests.propTypes = {
+Section1.propTypes = {
   ltr: PropTypes.string.isRequired,
 };

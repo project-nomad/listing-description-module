@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Details from './Details.jsx';
+import Overview from './Overview.jsx';
 
 
 class App extends React.Component {
@@ -8,10 +8,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       overview: [],
-      theSpace: [],
-      guestAccess: [],
-      interactionWithGuests: [],
-      otherThingsToNote: []
+      s1: [],
+      s2: [],
+      s3: [],
+      s4: []
     };
   }
 
@@ -19,17 +19,17 @@ class App extends React.Component {
 
     axios.get('/overview/listingId/1')
     .then((results) => {
-      let theSpacePg = results.data[0].theSpace.split('\n\n');
-      let guestAccessPg = results.data[0].guestAccess.split('\n\n');
-      let interactionWithGuestsPg = results.data[0].interactionWithGuests.split('\n\n');
-      let otherThingsToNotePg = results.data[0].otherThingsToNote.split('\n\n');
+      let s1 = results.data[0].theSpace.split('\n\n');
+      let s2 = results.data[0].guestAccess.split('\n\n');
+      let s3 = results.data[0].interactionWithGuests.split('\n\n');
+      let s4 = results.data[0].otherThingsToNote.split('\n\n');
 
       this.setState({
         overview: results.data[0],
-        theSpace: theSpacePg,
-        guestAccess: guestAccessPg,
-        interactionWithGuests: interactionWithGuestsPg,
-        otherThingsToNote: otherThingsToNotePg,
+        s1: s1,
+        s2: s2,
+        s3: s3,
+        s4: s4,
       })
     })
     .catch((error) => {
@@ -42,12 +42,12 @@ class App extends React.Component {
       <div>
         <div>
           <div>
-            <Details 
+            <Overview 
               overview={this.state.overview} 
-              theSpaceParagraphs={this.state.theSpace} 
-              guestAccess={this.state.guestAccess}
-              interactionSection={this.state.interactionWithGuests}
-              otherThingsToNote={this.state.otherThingsToNote}
+              section1={this.state.s1} 
+              section2={this.state.s2}
+              section3={this.state.s3}
+              section4={this.state.s4}
             />
           </div>
         </div>
