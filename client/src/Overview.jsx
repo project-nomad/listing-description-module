@@ -117,6 +117,7 @@ class Overview extends React.Component {
 export default Overview;
 
 Overview.propTypes = {
+  summary: PropTypes.array.isRequired,
   section1: PropTypes.array.isRequired,
   section2: PropTypes.array.isRequired,
   section3: PropTypes.array.isRequired,
