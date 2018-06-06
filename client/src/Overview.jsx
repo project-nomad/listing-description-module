@@ -27,12 +27,22 @@ const ButtonInLineStyle = {
 class Overview extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      display: false
+    };
+    this.hideOverview = this.hideOverview.bind(this);
+  }
+
+  hideOverview(){
+    this.setState((prevState) => ({
+      display: !prevState.display
+    }));
   }
 
   render() {
     return (
-      <div id="details" >
-        <div>
+      <div id="details">
+        <div style={{display: this.state.display ? 'block' : 'none' }} >
           <div>
             <Div className='the-overview'>
               <span>The space</span>
@@ -85,11 +95,11 @@ class Overview extends React.Component {
                   ))
                 }
               </Div>
-              <div>
-                <HideButton style={ButtonInLineStyle}/>
-              </div>
             </div>
           </div>
+        </div>
+        <div>
+          <HideButton style={ButtonInLineStyle} hideOverview={this.hideOverview}/>
         </div>
       </div>
     );

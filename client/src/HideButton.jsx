@@ -50,27 +50,39 @@ const ButtonInLineStyle = {
   fill: 'currentColor'
 }
 
-const ArrowInLineStyle = {
-  transform: { rotate: '180deg'}
-}
-
 class HideButton extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      expanded: false,
+      arrow: {transform: [{rotate: '0deg'}]}
+    };
+    this.clickHandler = this.clickHandler.bind(this);
   }
   
+  clickHandler() {
+    let expandedState = this.state.expanded
+    let arrowDegree = expandedState === false ? {transform: 'rotate(180deg)'} : {transform: 'rotate(0deg)'} 
+    this.setState({
+      expanded: !expandedState,
+      arrow: arrowDegree
+    }, () => {
+      this.props.hideOverview();
+    })
+  }
+
   render(){
     return(
       <div style={{marginTop: '8px', marginBottom: '24px'}}>
         <MainDiv className="_157yfd15">
-          <Button type="button" className="_b82bweu" aria-expanded="true" aria-busy="false">
+          <Button type="button" className="_b82bweu" aria-expanded={this.state.expanded} aria-busy="false" onClick={this.clickHandler}>
             <TblDiv className="_qtix31">
               <TblCellDiv className="_ni9axhe">
-                <span>Hide</span>
+                <span>{this.state.expanded ? 'Hide' : 'Read more about the space' }</span>
               </TblCellDiv>
               <TblCellDiv className="_ni9axhe">
                 <div style={{marginLeft: '8px'}}>
-                  <ArrowDiv className="_d5depq" style={ArrowInLineStyle}>
+                  <ArrowDiv className="_d5depq" style={this.state.arrow}>
                     <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style={ButtonInLineStyle}>
                       <path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fillRule="evenodd"></path>
                     </svg>
