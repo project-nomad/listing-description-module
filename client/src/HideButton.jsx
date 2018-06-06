@@ -74,15 +74,15 @@ class HideButton extends React.Component {
   render(){
     return(
       <div style={{marginTop: '8px', marginBottom: '24px'}}>
-        <MainDiv className="_157yfd15">
-          <Button type="button" className="_b82bweu" aria-expanded={this.state.expanded} aria-busy="false" onClick={this.clickHandler}>
-            <TblDiv className="_qtix31">
-              <TblCellDiv className="_ni9axhe">
+        <MainDiv>
+          <Button type="button" aria-expanded={this.state.expanded} aria-busy="false" onClick={this.clickHandler}>
+            <TblDiv>
+              <TblCellDiv>
                 <span>{this.state.expanded ? 'Hide' : 'Read more about the space' }</span>
               </TblCellDiv>
-              <TblCellDiv className="_ni9axhe">
+              <TblCellDiv>
                 <div style={{marginLeft: '8px'}}>
-                  <ArrowDiv className="_d5depq" style={this.state.arrow}>
+                  <ArrowDiv style={this.state.arrow}>
                     <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style={ButtonInLineStyle}>
                       <path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fillRule="evenodd"></path>
                     </svg>
