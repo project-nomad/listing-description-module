@@ -19,6 +19,7 @@ class App extends React.Component {
 
     axios.get('/overview/listingId/1')
     .then((results) => {
+      let summary = results.data[0].summary.split('\n\n');
       let s1 = results.data[0].theSpace.split('\n\n');
       let s2 = results.data[0].guestAccess.split('\n\n');
       let s3 = results.data[0].interactionWithGuests.split('\n\n');
@@ -26,6 +27,7 @@ class App extends React.Component {
 
       this.setState({
         overview: results.data[0],
+        summary: summary,
         s1: s1,
         s2: s2,
         s3: s3,
@@ -43,7 +45,7 @@ class App extends React.Component {
         <div>
           <div>
             <Overview 
-              overview={this.state.overview} 
+              summary={this.state.summary} 
               section1={this.state.s1} 
               section2={this.state.s2}
               section3={this.state.s3}

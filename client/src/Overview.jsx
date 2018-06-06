@@ -7,7 +7,14 @@ import Section3 from './Section3.jsx';
 import Section4 from './Section4.jsx';
 import HideButton from './HideButton.jsx';
 
-
+const SumDiv = Styled.div`
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #484848;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+`
 const Div = Styled.div`
     font-weight: 600 !important;
     color: #484848 !important;
@@ -42,27 +49,28 @@ class Overview extends React.Component {
   render() {
     return (
       <div id="details">
-        <div style={{display: this.state.display ? 'block' : 'none' }} >
-          <div>
-            <Div className='the-overview'>
-              <span>The space</span>
-            </Div>
-            <Div className='the-overview'>
-              {this.props.section1.map( (paragraph, idx) => (
-                  <Section1 
-                    key={idx}
-                    ltr={paragraph} 
-                  />
-                ))
-              }
-            </Div>
-          </div>
-          <div style={{marginTop: '16px'}}>
+        <SumDiv className='the-summary'>
+          {this.props.summary}
+        </SumDiv>
+        <div style={{marginTop: '16px'}}>
+          <div style={{display: this.state.display ? 'block' : 'none' }} >
             <div>
-              <Div className='the-overview'>
+              <Div className='the-space'>
+                <span>The space</span>
+              </Div>
+              <Div className='the-space'>
+                {this.props.section1.map( (paragraph, idx) => (
+                    <Section1 
+                      key={idx}
+                      ltr={paragraph} 
+                    />
+                  ))
+                }
+              </Div>
+              <Div className='the-guest-access'>
                 <span>Guest access</span>
               </Div>
-              <Div className='the-overview'>
+              <Div className='the-guest-access'>
                 {this.props.section2.map( (paragraph, idx) => (
                     <Section2 
                       key={idx}
@@ -71,10 +79,10 @@ class Overview extends React.Component {
                   ))
                 }
               </Div>
-              <Div className='the-overview'>
+              <Div className='the-interaction-with-guests'>
                 <span>Interaction with guests</span>
               </Div>
-              <Div className='the-overview'>
+              <Div className='the-interaction-with-guests'>
                 {this.props.section3.map( (paragraph, idx) => (
                     <Section3 
                       key={idx}
@@ -83,10 +91,10 @@ class Overview extends React.Component {
                   ))
                 }
               </Div>
-              <Div className='the-overview'>
+              <Div className='the-other-things-to-note'>
                 <span>Other things to note</span>
               </Div>
-              <Div className='the-overview'>
+              <Div className='the-other-things-to-note'>
                 {this.props.section4.map( (paragraph, idx) => (
                     <Section4 
                       key={idx}

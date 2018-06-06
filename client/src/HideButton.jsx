@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 
 const MainDiv = Styled.div`
@@ -98,3 +99,7 @@ class HideButton extends React.Component {
 }
 
 export default HideButton;
+
+HideButton.propTypes = {
+  hideOverview: PropTypes.func.isRequired,
+};
