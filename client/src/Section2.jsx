@@ -10,8 +10,7 @@ const P = Styled.p`
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
-
-`
+`;
 const Span = Styled.span`
   color: #484848 !important;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
@@ -25,7 +24,7 @@ const Span = Styled.span`
   -webkit-font-smoothing: antialiased;
 `;
 
-const Section2 = (props) => (
+const Section2 = props => (
   <div dir='ltr'>
     <P>
       <Span>

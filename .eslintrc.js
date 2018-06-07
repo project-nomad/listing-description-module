@@ -8,17 +8,7 @@
 module.exports = {
   'extends': 'airbnb-base',
   'parser': 'babel-eslint',
-  'parserOptions': {
-      'ecmaVersion': 6,
-      'sourceType': 'module',
-      'ecmaFeatures': {
-          'jsx': true,
-          'modules': true,
-          'experimentalObjectRestSpread': true
-      }
-  },
   'plugins': [
       'react', 'jest'
   ],
-  'extends': ['eslint:recommended', 'plugin:react/recommended'],
 };

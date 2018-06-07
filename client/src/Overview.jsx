@@ -14,7 +14,12 @@ const SumDiv = Styled.div`
   color: #484848;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-`
+`;
+const MainDiv = Styled.div`
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
+  transition: -ms-transform 304ms ease-out, -webkit-transform 304ms ease-out, transform 304ms ease-out, opacity 304ms ease-out !important;
+`;
 const Div = Styled.div`
     font-weight: 600 !important;
     color: #484848 !important;
@@ -25,44 +30,43 @@ const Div = Styled.div`
     line-height: 22px !important;
     letter-spacing: normal !important;
 `;
-
 const ButtonInLineStyle = {
   marginTop: '8px',
-  marginBottom: '24px'
-}
+  marginBottom: '24px',
+};
 
 class Overview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: false
+      display: false,
     };
     this.hideOverview = this.hideOverview.bind(this);
   }
 
-  hideOverview(){
-    this.setState((prevState) => ({
-      display: !prevState.display
+  hideOverview() {
+    this.setState(prevState => ({
+      display: !prevState.display,
     }));
   }
 
   render() {
     return (
       <div id="details">
-        <SumDiv className='the-summary'>
+        <SumDiv className='the-intro'>
           {this.props.summary}
         </SumDiv>
-        <div style={{marginTop: '16px'}}>
-          <div style={{display: this.state.display ? 'block' : 'none' }} >
+        <div style={{ marginTop: '16px' }}>
+          <MainDiv style={{ display: this.state.display ? 'block' : 'none' }} >
             <div>
               <Div className='the-space'>
                 <span>The space</span>
               </Div>
               <Div className='the-space'>
-                {this.props.section1.map( (paragraph, idx) => (
-                    <Section1 
+                {this.props.section1.map((paragraph, idx) => (
+                    <Section1
                       key={idx}
-                      ltr={paragraph} 
+                      ltr={paragraph}
                     />
                   ))
                 }
@@ -71,10 +75,10 @@ class Overview extends React.Component {
                 <span>Guest access</span>
               </Div>
               <Div className='the-guest-access'>
-                {this.props.section2.map( (paragraph, idx) => (
-                    <Section2 
+                {this.props.section2.map((paragraph, idx) => (
+                    <Section2
                       key={idx}
-                      ltr={paragraph} 
+                      ltr={paragraph}
                     />
                   ))
                 }
@@ -83,10 +87,10 @@ class Overview extends React.Component {
                 <span>Interaction with guests</span>
               </Div>
               <Div className='the-interaction-with-guests'>
-                {this.props.section3.map( (paragraph, idx) => (
-                    <Section3 
+                {this.props.section3.map((paragraph, idx) => (
+                    <Section3
                       key={idx}
-                      ltr={paragraph} 
+                      ltr={paragraph}
                     />
                   ))
                 }
@@ -95,16 +99,16 @@ class Overview extends React.Component {
                 <span>Other things to note</span>
               </Div>
               <Div className='the-other-things-to-note'>
-                {this.props.section4.map( (paragraph, idx) => (
-                    <Section4 
+                {this.props.section4.map((paragraph, idx) => (
+                    <Section4
                       key={idx}
-                      ltr={paragraph} 
+                      ltr={paragraph}
                     />
                   ))
                 }
               </Div>
             </div>
-          </div>
+          </MainDiv>
         </div>
         <div>
           <HideButton style={ButtonInLineStyle} hideOverview={this.hideOverview}/>

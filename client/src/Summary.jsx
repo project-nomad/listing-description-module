@@ -1,164 +1,269 @@
 import React from 'react';
+import Styled from 'styled-components';
 
+const Div_2h22gn = Styled.div`
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+  box-sizing: border-box;
+  `;
+const Div_1fcn46ls = Styled.div`
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: normal !important;
+  font-weight: normal !important;
+  `;
+const Div_10pi7ah2 = Styled.div`
+  width: 16.6666% !important;
+  float: left !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  min-height: 1px !important;
+  position: relative !important;
+  box-sizing: border-box;
+  `;
+const Div_1hpgssa1 = Styled.div`
+  width: 83.3333% !important;
+  float: left !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  min-height: 1px !important;
+  position: relative !important;
+  box-sizing: border-box;
+  `;
+const Div_TextCenterMuted = Styled.div`
+  color: #767676;
+  text-align: center;
+  `;
+const Div_1ij6gln6 = Styled.div`
+  position: relative !important;
+  margin: 0 auto !important;
+  `;
+const Div_qtix31 = Styled.div`
+  display: table !important;
+  box-sizing: border-box;
+  `;
+const Div_36rlri = Styled.table`
+  display: inline-block !important;
+  box-sizing: border-box;
+  `;
+const Div_1thk0tsb = Styled.div`
+  display: table-cell !important;
+  vertical-align: top !important;
+  box-sizing: border-box;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  `;
+const Button_110nrr2 = Styled.button`
+  -webkit-appearance: none !important;
+  background: transparent !important;
+  border: 0px !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  user-select: auto !important;
+  text-decoration: none !important;
+  `;
+const Span_amsa32j = Styled.span`
+  font-weight: 800 !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  letter-spacing: normal !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  color: #484848 !important;
+  `;
+const Span_okqgdgp = Styled.span`
+  font-weight: 600 !important;
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: normal !important;
+  display: inline !important;
+  box-sizing: border-box;
+  `;
+const Span_1r3plqb = Styled.span`
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  `;
+const Span_jz15f0c = Styled.span`
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: normal !important;
+  font-weight: normal !important;
+  display: inline !important;
+  `;
+const H1_1xu9tpch = Styled.h1`
+  color: inherit !important;
+  font-size: 1em !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  display: inline !important;
+  `;
+
+const Div = Styled.div`
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #484848;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  `;
+const ListName = Styled.div`
+  color: #484848 !important;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1em !important;
+  font-weight: inherit !important;
+  line-height: 1.43 !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  display: inline !important;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  `;
+const Box = Styled.div`
+  display: block !important;
+  box-sizing: border-box; !important;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+  `;
+const Pane = Styled.div`
+  display: block !important;
+  box-sizing: border-box;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  min-height: 1px !important;
+  position: relative !important;
+  width: 100% !important;
+  float: left !important;
+  `;
+
+
+//comments
 const Summary = () => (
   <div id="summary">
     <div>
-      <div style="margin-top:24px;margin-bottom:24px">
-        {/* start of elements that don't appear to do anything */}
-        <span className="hide">
-          <div itemScope="" itemType="http://schema.org/BreadcrumbList">
-            <div className="_5y40cyp">
-              <span itemProp="itemListElement" itemScope="" itemType="http://schema.org/ListItem">
-                <div itemProp="item" className="_36rlri">
-                  <a href="/s/Greece" className="_1d7pql5c" aria-busy="false">
-                    <span className="_1dpqovn9">
-                      <span itemProp="name">Greece</span>
-                    </span>
-                  </a>
-                </div>
-                <div className="_36rlri" style="margin-left:8px;margin-right:8px">
-                  <small className="_tdcnpvp">&gt;</small>
-                </div>
-              </span>
-              <span itemProp="itemListElement" itemScope="" itemType="http://schema.org/ListItem">
-                <div itemProp="item" className="_36rlri">
-                  <a href="/s/South-Aegean--Greece" className="_1d7pql5c" aria-busy="false">
-                    <span className="_1dpqovn9">
-                      <span itemProp="name">South Aegean</span>
-                    </span>
-                  </a>
-                </div>
-                <div className="_36rlri" style="margin-left:8px;margin-right:8px">
-                  <small className="_tdcnpvp">&gt;</small>
-                </div>
-              </span>
-              <span itemProp="itemListElement" itemScope="" itemType="http://schema.org/ListItem">
-                <div itemProp="item" className="_36rlri">
-                  <a href="/s/Oia--Greece" className="_1d7pql5c" aria-busy="false">
-                    <span className="_1dpqovn9">
-                      <span itemProp="name">Oia</span>
-                    </span>
-                  </a>
-                </div>
-              </span>
-            </div>
-          </div>
-        </span>
-        <a href="/s/Oia--Greece?listing_types[]=61" className="link-reset">
-          <div className="_4efw5a">
-            <span>
-              <span className="_mvzifm4">
-                <span style="color:#231341">Cycladic house</span>
-              </span>
-            </span>
-          </div>
-        </a>
-        {/* end of stuff that doesn't appear to do anything */}
-        {/* here is where the name of the location and user profile tag starts */}
-        <div>
-          <div style="margin-bottom: 6px;">
-            <div itemProp="name">
-              <span dir="ltr">
-                <span className="_amsa32j">
-                  <h1 tabIndex="-1" className="_1xu9tpch">Unique Architecture Cave House</h1>
+      <div style={{ marginTop: '24px', marginBottom: '24px' }}>
+        <Div_2h22gn className='_2h22gn'>
+          <Div_1hpgssa1 className='1hpgssa1'>
+            <div style={{ marginBottom: '6px' }}>
+              {/* Listing name Starts */}
+              <ListName itemProp="name">
+                <span dir="ltr">
+                  <Span_amsa32j className="_amsa32j">
+                    <H1_1xu9tpch className="_1xu9tpch">Unique Architecture Cave House</H1_1xu9tpch>
+                  </Span_amsa32j>
                 </span>
-              </span>
+              </ListName>
+              {/* Listing name Ends */}
             </div>
-          </div>
-          <div style="margin-bottom: 16px;">
-            <div className="_2930ex">
-              <div className="_10ejfg4u">
-                <div data-location="Oia">
-                  <a href="#neighborhood" className="link-reset">
-                    <div className="_1fcn46ls">Oia</div>
-                  </a>
+            <div style={{ marginBottom: '16px' }}>
+              <div>
+                {/* Neighborhood starts */}
+                <div>
+                  <Div_1fcn46ls className='_1fcn46ls'>Oia</Div_1fcn46ls>
                 </div>
-              </div>
-              <div className="_ni9axhe">
-                <div style="margin-bottom: 6px;">
-                  <div className="_1ij6gln6" style="height: 48px; width: 48px; display: block;">
-                    <button type="button" className="_110nrr2" aria-label="Laskarina User Profile" aria-busy="false">
-                      <img className="_12r18es" src="https://a0.muscache.com/im/pictures/32e97880-2cfb-430c-9ec0-faeb28be8612.jpg?aki_policy=profile_x_medium" height="48" width="48" alt="Laskarina User Profile" title="Laskarina User Profile"/>
-                    </button>
-                    <div className="_8kd6yy">
-                      <svg viewBox="0 0 14 24" role="img" aria-label="Laskarina is a superhost." focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;">
-                        <path d="m10.5 20.0005065c0 1.9326761-1.56704361 3.4994935-3.5 3.4994935s-3.5-1.5668174-3.5-3.4994935c0-1.9326762 1.5670426-3.5005065 3.5-3.5005065s3.5 1.5678303 3.5 3.5005065m-9.99486248-18.58757644-.00513752 8.13836018c0 .45796416.21682079.88992936.58880718 1.17090736l5.07730539 3.831699c.4870761.367971 1.16836618.367971 1.65647028.0009994l5.08141685-3.8266984c.3719859-.2789784.5898342-.7109444.5908612-1.16790827.0010271-1.75186288.0041101-6.21051146.0051391-8.14035983 0-.50396002-.4202834-.91292822-.9392158-.91292822l-11.11643181-.00699945c-.51790391-.00099942-.93818728.40796878-.93921487.91292823" fill="#fff"></path>
-                        <path d="m12 9.5-5-3.70124468 5-3.79875532zm-6.1292309 9.187485c-.52182677.3180834-.8707691.8762459-.8707691 1.5144379 0 .9937534.83703449 1.7980771 1.870162 1.7980771.81806646 0 1.50434636-.5065007 1.75946763-1.2095239z" fill="#ffb400"></path>
-                        <path d="m12 9.5-5 3.75-5-3.75v-7.5z" fill="#ff5a5f"></path>
-                        <path d="m7 24c-2.2060547 0-4-1.7939453-4-3.9990234 0-2.2060547 1.7939453-4.0009766 4-4.0009766s4 1.7949219 4 4.0009766c0 2.2050781-1.7939453 3.9990234-4 3.9990234zm0-7c-1.6542969 0-3 1.3466797-3 3.0009766 0 1.6533203 1.3457031 2.9990234 3 2.9990234s3-1.3457031 3-2.9990234c0-1.6542969-1.3457031-3.0009766-3-3.0009766zm.0039062-1.8242188c-.4560547 0-.9121094-.1064453-1.2617188-.3164062l-5.0458984-3.8642578c-.4697265-.3642578-.696289-.8525391-.696289-1.4951172v-8c.0009766-.3730469.1679688-.7529297.4580078-1.0429688.2900391-.2905273.6689453-.4570312 1.0410156-.4570312h.0019531 10.9990235c.7851562 0 1.5.7148438 1.5 1.5v7.9277344c-.0009766.6762695-.2421875 1.2177734-.6953125 1.5668945l-5.0009766 3.8325195c-.3505859.2333985-.8251953.3486328-1.2998047.3486328zm-5.5058593-14.1757812c-.1044922 0-.2324219.0625-.3330078.1635742-.1015625.1020508-.1650391.230957-.1650391.3374024v7.9990234c0 .3305664.0888672.5341797.3066406.703125l4.9970703 3.8310547c.3330078.1953125 1.0859375.2001953 1.4208984-.0205078l4.9716797-3.8125c.2001954-.1542969.3027344-.4155274.303711-.7749024v-7.9267578c0-.2285156-.2714844-.4995117-.5-.4995117h-11-.0009766s0 0-.0009765 0z" fill="#484848"></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+                {/* Neighborhood ends */}
               </div>
             </div>
-          </div>
-        </div>
+          </Div_1hpgssa1>
+          <Div_10pi7ah2 className='10pi7ah2'>
+            <div style={{ marginTop: '12px' }}>
+              <Div_TextCenterMuted>
+                <div style={{ marginBottom: '6px' }}>
+                  <Div_1ij6gln6 style={{ height: '64px', width: '64px', display: 'block' }} >
+                    <Button_110nrr2>
+                      profile
+                    </Button_110nrr2>
+                  </Div_1ij6gln6>
+                </div>
+              </Div_TextCenterMuted>
+            </div>
+          </Div_10pi7ah2>
+        </Div_2h22gn>
         {/* here is where the name of the location and user profile tag end */}
         {/* here is where the numbers start */}
         <div>
           <div>
-            <div style="margin-bottom: -16px;">
-              <div className="_2h22gn">
-                <div className="_iq8x9is">
-                  <div style="margin-bottom: 16px;">
-                    <div className="_qtix31">
-                      <div className="_1thk0tsb">
-                        <div style="margin-right: 8px;">
-                          <span className="_okqgdgp">
-                            <span className="_1r3plqb" aria-hidden="true">󰄂</span>
-                          </span>
+            <div>
+              <div>
+                <div>
+                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+                    <Div_qtix31 className="_qtix31">
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <div style={{ marginRight: '8px' }}>
+                          <Span_okqgdgp className="_okqgdgp">
+                            <Span_1r3plqb className="_1r3plqb" aria-hidden="true">󰄂</Span_1r3plqb>
+                          </Span_okqgdgp>
                         </div>
-                      </div>
-                      <div className="_1thk0tsb">
-                        <span className="_jz15f0c">4 guests</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div style="margin-bottom: 16px;">
-                    <div className="_qtix31">
-                      <div className="_1thk0tsb">
-                        <div style="margin-right: 8px;">
-                          <span className="_okqgdgp">
-                            <span className="_1r3plqb" aria-hidden="true">󰄄</span>
-                          </span>
+                      </Div_1thk0tsb>
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <Span_jz15f0c className="_jz15f0c">4 guests</Span_jz15f0c>
+                      </Div_1thk0tsb>
+                    </Div_qtix31>
+                  </Div_36rlri>
+                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+                    <Div_qtix31 className="_qtix31">
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <div style={{ marginRight: '8px' }}>
+                          <Span_okqgdgp className="_okqgdgp">
+                            <Span_1r3plqb className="_1r3plqb" aria-hidden="true">󰄄</Span_1r3plqb>
+                          </Span_okqgdgp>
                         </div>
-                      </div>
-                      <div className="_1thk0tsb">
-                        <span className="_jz15f0c">2 bedrooms</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="_iq8x9is">
-                  <div style="margin-bottom: 16px;">
-                    <div className="_qtix31">
-                      <div className="_1thk0tsb">
-                        <div style="margin-right: 8px;">
-                          <span className="_okqgdgp">
-                            <span className="_1r3plqb" aria-hidden="true">󰄃</span>
-                          </span>
+                      </Div_1thk0tsb>
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <Span_jz15f0c className="_jz15f0c">2 bedrooms</Span_jz15f0c>
+                      </Div_1thk0tsb>
+                    </Div_qtix31>
+                  </Div_36rlri>
+                {/* </Pane> */}
+                {/* <Pane className="_iq8x9is"> */}
+                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+                    <Div_qtix31 className="_qtix31">
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <div style={{ marginRight: '8px' }}>
+                          <Span_okqgdgp className="_okqgdgp">
+                            <Span_1r3plqb className="_1r3plqb" aria-hidden="true">󰄃</Span_1r3plqb>
+                          </Span_okqgdgp>
                         </div>
-                      </div>
-                      <div className="_1thk0tsb">
-                        <span className="_jz15f0c">4 beds</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div style="margin-bottom: 16px;">
-                    <div className="_qtix31">
-                      <div className="_1thk0tsb">
-                        <div style="margin-right: 8px;">
-                          <span className="_okqgdgp">
-                            <span className="_1r3plqb" aria-hidden="true">󰄁</span>
-                          </span>
+                      </Div_1thk0tsb>
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <Span_jz15f0c className="_jz15f0c">4 beds</Span_jz15f0c>
+                      </Div_1thk0tsb>
+                    </Div_qtix31>
+                  </Div_36rlri>
+                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+                    <Div_qtix31 className="_qtix31">
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <div style={{ marginRight: '8px' }}>
+                          <Span_okqgdgp className="_okqgdgp">
+                            <Span_1r3plqb className="_1r3plqb" aria-hidden="true">󰄁</Span_1r3plqb>
+                          </Span_okqgdgp>
                         </div>
-                      </div>
-                      <div className="_1thk0tsb">
-                        <span className="_jz15f0c">1 bath</span>
-                      </div>
-                    </div>
-                  </div>
+                      </Div_1thk0tsb>
+                      <Div_1thk0tsb className="_1thk0tsb">
+                        <Span_jz15f0c className="_jz15f0c">1 bath</Span_jz15f0c>
+                      </Div_1thk0tsb>
+                    </Div_qtix31>
+                  </Div_36rlri>
                 </div>
               </div>
             </div>
