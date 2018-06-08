@@ -61,6 +61,9 @@ const Div_1thk0tsb = Styled.div`
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   `;
+const Div_4efw5a = Styled.div`
+  text-transform: uppercase !important;
+  `;
 const Button_110nrr2 = Styled.button`
   -webkit-appearance: none !important;
   background: transparent !important;
@@ -70,6 +73,19 @@ const Button_110nrr2 = Styled.button`
   padding: 0px !important;
   user-select: auto !important;
   text-decoration: none !important;
+  `;
+const Span_mvzifm4 = Styled.span`
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  letter-spacing: normal !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  color: #484848 !important;
+  font-weight: 800 !important;
+  display: inline !important;
   `;
 const Span_amsa32j = Styled.span`
   font-weight: 800 !important;
@@ -138,10 +154,15 @@ const ListName = Styled.div`
   -webkit-font-smoothing: antialiased;
   `;
 //comments
-const Summary = () => (
+const Summary = props => (
   <div id="summary">
     <div>
       <div style={{ marginTop: '24px', marginBottom: '24px' }}>
+        <Div_4efw5a className='_4efw5a'>
+            <Span_mvzifm4 className='_mvzifm4'>
+              <span style={{ color: '#231341' }}>{props.listingBlurb}</span>
+            </Span_mvzifm4>
+        </Div_4efw5a>
         <Div_2h22gn className='_2h22gn'>
           <Div_1hpgssa1 className='1hpgssa1'>
             <div style={{ marginBottom: '6px' }}>
@@ -149,7 +170,7 @@ const Summary = () => (
               <ListName itemProp="name">
                 <span dir="ltr">
                   <Span_amsa32j className="_amsa32j">
-                    <H1_1xu9tpch className="_1xu9tpch">Unique Architecture Cave House</H1_1xu9tpch>
+                    <H1_1xu9tpch className="_1xu9tpch">{props.listingName}</H1_1xu9tpch>
                   </Span_amsa32j>
                 </span>
               </ListName>
@@ -159,7 +180,7 @@ const Summary = () => (
               <div>
                 {/* Neighborhood starts */}
                 <div>
-                  <Div_1fcn46ls className='_1fcn46ls'>Oia</Div_1fcn46ls>
+                  <Div_1fcn46ls className='_1fcn46ls'>{props.location}</Div_1fcn46ls>
                 </div>
                 {/* Neighborhood ends */}
               </div>
@@ -181,93 +202,83 @@ const Summary = () => (
         </Div_2h22gn>
         {/* here is where the name of the location and user profile tag end */}
         {/* here is where the numbers start */}
-        <div>
-          <div>
-            <div>
-              <div>
-                <div>
-                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
-                    <Div_qtix31 className="_qtix31">
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <div style={{ marginRight: '8px' }}>
-                          <Span_okqgdgp className="_okqgdgp">
-                            <Span_1r3plqb className="_1r3plqb" ariaHidden="true">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="15" height="15" viewBox="0 0 549.907 549.908" style={{ enableBackground: 'new 0 0 549.907 549.908' }} xmlSpace="preserve" className=""><g><g transform="matrix(-1 0 0 1 549.907 0)"><g>
-                                <path d="M110.534,220.962c0-49.027,39.741-88.768,88.768-88.768s88.768,39.741,88.768,88.768c0,49.026-39.741,88.768-88.768,88.768   S110.534,269.989,110.534,220.962z M236.968,315.783h-75.327c-62.668,0-113.655,50.986-113.655,113.646v92.143l0.236,1.437   l6.36,1.985c59.796,18.679,111.764,24.914,154.531,24.914c83.531,0,131.94-23.82,134.938-25.333l5.94-3.015l0.626,0.006v-92.137   C350.617,366.769,299.631,315.783,236.968,315.783z M350.617,177.533c49.024,0,88.768-39.741,88.768-88.768   C439.385,39.741,399.642,0,350.617,0c-49.023,0-88.768,39.741-88.768,88.765C261.85,137.792,301.594,177.533,350.617,177.533z    M388.28,183.585h-75.326c-1.797,0-3.547,0.189-5.32,0.275c6.81,14.295,10.74,30.225,10.74,47.094   c0,31.129-13.057,59.205-33.922,79.23c48.823,14.523,86.144,55.986,94.638,107.08c71.999-3.145,113.504-23.49,116.265-24.885   l5.94-3.015l0.626,0.012v-92.137C501.933,234.575,450.946,183.585,388.28,183.585z" dataOriginal="#000000" className="active-path" style={{ fill:'#484848' }} dataOldColor="#000000"></path>
-                                </g></g></g>
-                              </svg>
-                            </Span_1r3plqb>
-                          </Span_okqgdgp>
-                        </div>
-                      </Div_1thk0tsb>
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <Span_jz15f0c className="_jz15f0c">4 guests</Span_jz15f0c>
-                      </Div_1thk0tsb>
-                    </Div_qtix31>
-                  </Div_36rlri>
-                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
-                    <Div_qtix31 className="_qtix31">
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <div style={{ marginRight: '8px' }}>
-                          <Span_okqgdgp className="_okqgdgp">
-                            <Span_1r3plqb className="_1r3plqb" ariaHidden="true">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="15" height="15" viewBox="0 0 492.5 492.5" style={{ enableBackground: 'new 0 0 492.5 492.5' }} xmlSpace="preserve" className=""><g><g transform="matrix(-1 0 0 1 492.5 0)"><g>
-                                <path d="M184.646,0v21.72H99.704v433.358h31.403V53.123h53.539V492.5l208.15-37.422v-61.235V37.5L184.646,0z M222.938,263.129   c-6.997,0-12.67-7.381-12.67-16.486c0-9.104,5.673-16.485,12.67-16.485s12.67,7.381,12.67,16.485   C235.608,255.748,229.935,263.129,222.938,263.129z" dataOriginal="#000000" className="active-path" style={{ fill: '#484848' }} dataOldColor="#000000"></path>
-                                </g></g></g>
-                              </svg>
-                            </Span_1r3plqb>
-                          </Span_okqgdgp>
-                        </div>
-                      </Div_1thk0tsb>
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <Span_jz15f0c className="_jz15f0c">2 bedrooms</Span_jz15f0c>
-                      </Div_1thk0tsb>
-                    </Div_qtix31>
-                  </Div_36rlri>
-                {/* </Pane> */}
-                {/* <Pane className="_iq8x9is"> */}
-                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
-                    <Div_qtix31 className="_qtix31">
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <div style={{ marginRight: '8px' }}>
-                          <Span_okqgdgp className="_okqgdgp">
-                            <Span_1r3plqb className="_1r3plqb" aria-hidden="true">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve" width="15px" height="15px">
-                                <path d="M53.333,202.667h53.333c-3.285,0-6.379-1.515-8.405-4.096c-2.027-2.581-2.731-5.952-1.941-9.152l6.635-26.517     c3.563-14.272,16.341-24.235,31.04-24.235h68.672c17.643,0,32,14.357,32,32V192c0,5.888-4.779,10.667-10.667,10.667h64     c-5.888,0-10.667-4.779-10.667-10.667v-21.333c0-17.643,14.357-32,32-32h68.672c14.699,0,27.477,9.963,31.04,24.235l6.635,26.517     c0.811,3.179,0.085,6.571-1.941,9.152c-2.027,2.581-5.12,4.096-8.405,4.096h53.333c5.888,0,10.667-4.779,10.667-10.667v-64     c0-29.397-23.936-53.333-53.333-53.333H96c-29.397,0-53.333,23.936-53.333,53.333v64     C42.667,197.888,47.445,202.667,53.333,202.667z" fill="#484848"/>
-                                <path d="M458.667,224H53.333C23.936,224,0,247.936,0,277.333v149.333c0,5.888,4.779,10.667,10.667,10.667     s10.667-4.779,10.667-10.667v-32h469.333v32c0,5.888,4.779,10.667,10.667,10.667c5.888,0,10.667-4.779,10.667-10.667V277.333     C512,247.936,488.064,224,458.667,224z M490.667,373.333H21.333V352h469.333V373.333z" fill="#484848"/>
-                              </svg>
-                            </Span_1r3plqb>
-                          </Span_okqgdgp>
-                        </div>
-                      </Div_1thk0tsb>
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <Span_jz15f0c className="_jz15f0c">4 beds</Span_jz15f0c>
-                      </Div_1thk0tsb>
-                    </Div_qtix31>
-                  </Div_36rlri>
-                  <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
-                    <Div_qtix31 className="_qtix31">
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <div style={{ marginRight: '8px' }}>
-                          <Span_okqgdgp className="_okqgdgp">
-                            <Span_1r3plqb className="_1r3plqb" aria-hidden="true">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve" width="15px" height="15px">
-                                <path d="M57.122,266.166V68.137c0-17.601,14.319-31.921,31.921-31.921c15.019,0,27.64,10.429,31.024,24.423    c-13.723,8.525-24.149,21.291-29.759,36.708c-6.625,18.202-5.766,37.892,2.421,55.446l7.056,15.133l131.438-61.291l-7.056-15.132    c-8.185-17.554-22.718-30.87-40.919-37.495c-10.243-3.73-20.96-5.087-31.5-4.102c-7.912-27.166-33.017-47.082-62.704-47.082    c-36.014,0-65.312,29.299-65.312,65.312v198.029H0v33.391h24.168c1.83,34.981,9.574,63.856,23.549,87.873    c12.414,21.335,29.568,38.088,50.985,49.794c4.843,2.647,9.921,5.028,15.209,7.16l-31.218,46.052l27.639,18.737l37.421-55.201    c12.927,2.334,26.759,3.526,41.465,3.526h133.565c14.707,0,28.538-1.192,41.465-3.526l37.421,55.201l27.639-18.737l-31.218-46.052    c5.289-2.133,10.366-4.512,15.209-7.16c21.417-11.707,38.571-28.459,50.985-49.794c13.974-24.016,21.719-52.892,23.549-87.873H512    v-33.392H57.122z" dataOriginal="#000000" className="active-path" dataOldColor="#000000" fill="#484848"/>
-                              </svg>
-                            </Span_1r3plqb>
-                          </Span_okqgdgp>
-                        </div>
-                      </Div_1thk0tsb>
-                      <Div_1thk0tsb className="_1thk0tsb">
-                        <Span_jz15f0c className="_jz15f0c">1 bath</Span_jz15f0c>
-                      </Div_1thk0tsb>
-                    </Div_qtix31>
-                  </Div_36rlri>
-                </div>
+        <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+          <Div_qtix31 className="_qtix31">
+            <Div_1thk0tsb className="_1thk0tsb">
+              <div style={{ marginRight: '8px' }}>
+                <Span_okqgdgp className="_okqgdgp">
+                  <Span_1r3plqb className="_1r3plqb" ariaHidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="15" height="15" viewBox="0 0 549.907 549.908" style={{ enableBackground: 'new 0 0 549.907 549.908' }} xmlSpace="preserve" className=""><g><g transform="matrix(-1 0 0 1 549.907 0)"><g>
+                      <path d="M110.534,220.962c0-49.027,39.741-88.768,88.768-88.768s88.768,39.741,88.768,88.768c0,49.026-39.741,88.768-88.768,88.768   S110.534,269.989,110.534,220.962z M236.968,315.783h-75.327c-62.668,0-113.655,50.986-113.655,113.646v92.143l0.236,1.437   l6.36,1.985c59.796,18.679,111.764,24.914,154.531,24.914c83.531,0,131.94-23.82,134.938-25.333l5.94-3.015l0.626,0.006v-92.137   C350.617,366.769,299.631,315.783,236.968,315.783z M350.617,177.533c49.024,0,88.768-39.741,88.768-88.768   C439.385,39.741,399.642,0,350.617,0c-49.023,0-88.768,39.741-88.768,88.765C261.85,137.792,301.594,177.533,350.617,177.533z    M388.28,183.585h-75.326c-1.797,0-3.547,0.189-5.32,0.275c6.81,14.295,10.74,30.225,10.74,47.094   c0,31.129-13.057,59.205-33.922,79.23c48.823,14.523,86.144,55.986,94.638,107.08c71.999-3.145,113.504-23.49,116.265-24.885   l5.94-3.015l0.626,0.012v-92.137C501.933,234.575,450.946,183.585,388.28,183.585z" data-original="#000000" className="active-path" style={{ fill:'#484848' }} data-old-color="#000000"></path>
+                      </g></g></g>
+                    </svg>
+                  </Span_1r3plqb>
+                </Span_okqgdgp>
               </div>
-            </div>
-          </div>
-        </div>
+            </Div_1thk0tsb>
+            <Div_1thk0tsb className="_1thk0tsb">
+              <Span_jz15f0c className="_jz15f0c">{props.noOfGuests} guests</Span_jz15f0c>
+            </Div_1thk0tsb>
+          </Div_qtix31>
+        </Div_36rlri>
+        <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+          <Div_qtix31 className="_qtix31">
+            <Div_1thk0tsb className="_1thk0tsb">
+              <div style={{ marginRight: '8px' }}>
+                <Span_okqgdgp className="_okqgdgp">
+                  <Span_1r3plqb className="_1r3plqb" ariaHidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="15" height="15" viewBox="0 0 492.5 492.5" style={{ enableBackground: 'new 0 0 492.5 492.5' }} xmlSpace="preserve" className=""><g><g transform="matrix(-1 0 0 1 492.5 0)"><g>
+                      <path d="M184.646,0v21.72H99.704v433.358h31.403V53.123h53.539V492.5l208.15-37.422v-61.235V37.5L184.646,0z M222.938,263.129   c-6.997,0-12.67-7.381-12.67-16.486c0-9.104,5.673-16.485,12.67-16.485s12.67,7.381,12.67,16.485   C235.608,255.748,229.935,263.129,222.938,263.129z" data-original="#000000" className="active-path" style={{ fill: '#484848' }} data-old-color="#000000"></path>
+                      </g></g></g>
+                    </svg>
+                  </Span_1r3plqb>
+                </Span_okqgdgp>
+              </div>
+            </Div_1thk0tsb>
+            <Div_1thk0tsb className="_1thk0tsb">
+              <Span_jz15f0c className="_jz15f0c">{props.noOfBedrooms} bedrooms</Span_jz15f0c>
+            </Div_1thk0tsb>
+          </Div_qtix31>
+        </Div_36rlri>
+      {/* </Pane> */}
+      {/* <Pane className="_iq8x9is"> */}
+        <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+          <Div_qtix31 className="_qtix31">
+            <Div_1thk0tsb className="_1thk0tsb">
+              <div style={{ marginRight: '8px' }}>
+                <Span_okqgdgp className="_okqgdgp">
+                  <Span_1r3plqb className="_1r3plqb" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve" width="15px" height="15px">
+                      <path d="M53.333,202.667h53.333c-3.285,0-6.379-1.515-8.405-4.096c-2.027-2.581-2.731-5.952-1.941-9.152l6.635-26.517     c3.563-14.272,16.341-24.235,31.04-24.235h68.672c17.643,0,32,14.357,32,32V192c0,5.888-4.779,10.667-10.667,10.667h64     c-5.888,0-10.667-4.779-10.667-10.667v-21.333c0-17.643,14.357-32,32-32h68.672c14.699,0,27.477,9.963,31.04,24.235l6.635,26.517     c0.811,3.179,0.085,6.571-1.941,9.152c-2.027,2.581-5.12,4.096-8.405,4.096h53.333c5.888,0,10.667-4.779,10.667-10.667v-64     c0-29.397-23.936-53.333-53.333-53.333H96c-29.397,0-53.333,23.936-53.333,53.333v64     C42.667,197.888,47.445,202.667,53.333,202.667z" fill="#484848"/>
+                      <path d="M458.667,224H53.333C23.936,224,0,247.936,0,277.333v149.333c0,5.888,4.779,10.667,10.667,10.667     s10.667-4.779,10.667-10.667v-32h469.333v32c0,5.888,4.779,10.667,10.667,10.667c5.888,0,10.667-4.779,10.667-10.667V277.333     C512,247.936,488.064,224,458.667,224z M490.667,373.333H21.333V352h469.333V373.333z" fill="#484848"/>
+                    </svg>
+                  </Span_1r3plqb>
+                </Span_okqgdgp>
+              </div>
+            </Div_1thk0tsb>
+            <Div_1thk0tsb className="_1thk0tsb">
+              <Span_jz15f0c className="_jz15f0c">{props.noOfBeds} beds</Span_jz15f0c>
+            </Div_1thk0tsb>
+          </Div_qtix31>
+        </Div_36rlri>
+        <Div_36rlri className="_36rlri" style={{ marginRight: '16px' }}>
+          <Div_qtix31 className="_qtix31">
+            <Div_1thk0tsb className="_1thk0tsb">
+              <div style={{ marginRight: '8px' }}>
+                <Span_okqgdgp className="_okqgdgp">
+                  <Span_1r3plqb className="_1r3plqb" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve" width="15px" height="15px">
+                      <path d="M57.122,266.166V68.137c0-17.601,14.319-31.921,31.921-31.921c15.019,0,27.64,10.429,31.024,24.423    c-13.723,8.525-24.149,21.291-29.759,36.708c-6.625,18.202-5.766,37.892,2.421,55.446l7.056,15.133l131.438-61.291l-7.056-15.132    c-8.185-17.554-22.718-30.87-40.919-37.495c-10.243-3.73-20.96-5.087-31.5-4.102c-7.912-27.166-33.017-47.082-62.704-47.082    c-36.014,0-65.312,29.299-65.312,65.312v198.029H0v33.391h24.168c1.83,34.981,9.574,63.856,23.549,87.873    c12.414,21.335,29.568,38.088,50.985,49.794c4.843,2.647,9.921,5.028,15.209,7.16l-31.218,46.052l27.639,18.737l37.421-55.201    c12.927,2.334,26.759,3.526,41.465,3.526h133.565c14.707,0,28.538-1.192,41.465-3.526l37.421,55.201l27.639-18.737l-31.218-46.052    c5.289-2.133,10.366-4.512,15.209-7.16c21.417-11.707,38.571-28.459,50.985-49.794c13.974-24.016,21.719-52.892,23.549-87.873H512    v-33.392H57.122z" data-original="#000000" className="active-path" data-old-color="#000000" fill="#484848"/>
+                    </svg>
+                  </Span_1r3plqb>
+                </Span_okqgdgp>
+              </div>
+            </Div_1thk0tsb>
+            <Div_1thk0tsb className="_1thk0tsb">
+              <Span_jz15f0c className="_jz15f0c">{props.noOfBaths} bath</Span_jz15f0c>
+            </Div_1thk0tsb>
+          </Div_qtix31>
+        </Div_36rlri>
         {/* here is where the numbers end */}
       </div>
     </div>
