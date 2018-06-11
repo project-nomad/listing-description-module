@@ -159,10 +159,10 @@ class Highlights extends React.Component {
           <div style={{ marginTop: '12px' }}>
             <div>
               <div style={{ marginBottom: '8px' }}>
-                <Span_okqgdgp>Hot tub</Span_okqgdgp>
+                <Span_okqgdgp>Amazingly awesome</Span_okqgdgp>
                 <Span_jz15f0c>
                   <span> · </span>
-                  This is one of a few homes in this area that has this feature.
+                  {this.props.homeHighlight1}
                 </Span_jz15f0c>
               </div>
               <Div_5y40cyp>
@@ -212,10 +212,10 @@ class Highlights extends React.Component {
           <div style={{ marginTop: '12px' }}>
             <div>
               <div style={{ marginBottom: '8px' }}>
-                <Span_okqgdgp>Sparkling clean</Span_okqgdgp>
+                <Span_okqgdgp>Ridiculously radical</Span_okqgdgp>
                 <Span_jz15f0c>
                   <span> · </span>
-                  5 recent guests have said that this home was sparkling clean.
+                  {this.props.homeHighlight2}
                 </Span_jz15f0c>
               </div>
               <Div_5y40cyp>
@@ -265,10 +265,10 @@ class Highlights extends React.Component {
           <div style={{ marginTop: '12px' }}>
             <div>
               <div style={{ marginBottom: '8px' }}>
-                <Span_okqgdgp>Great location</Span_okqgdgp>
+                <Span_okqgdgp>Totally tubular</Span_okqgdgp>
                 <Span_jz15f0c>
                   <span> · </span>
-                  100% of recent guests gave this home's location a 5-star rating.
+                  {this.props.homeHighlight3}
                 </Span_jz15f0c>
               </div>
               <Div_5y40cyp>

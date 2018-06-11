@@ -11,7 +11,17 @@ app.use(bodyParser.json());
 app.get('/overview/listingId/:listingId', (req, res) => {
   db.getListingOverview(req.params.listingId, (err, results) => {
     if (err) {
-      res.status(500)
+      res.status(500);
+    } else {
+      res.send(results);
+    }
+  });
+});
+
+app.get('/sleepingdetails/listingId/:listingId', (req, res) => {
+  db.getSleepingDetails(req.params.listingId, (err, results) => {
+    if (err) {
+      res.status(500);
     } else {
       res.send(results);
     }

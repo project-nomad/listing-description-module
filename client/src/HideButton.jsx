@@ -12,7 +12,6 @@ const MainDiv = Styled.div`
   line-height: 22px !important;
   letter-spacing: normal !important;
 `;
-
 const Button = Styled.button`
   color: #008489 !important;
   font: inherit !important;
@@ -28,16 +27,13 @@ const Button = Styled.button`
   user-select: auto !important;
   text-align: left !important;
 `;
-
 const TblDiv = Styled.div`
   display: table !important;
 `;
-
 const TblCellDiv = Styled.div`
   display: table-cell !important;
   vertical-align: middle !important;
 `;
-
 const ArrowDiv = Styled.div`
   display: table-cell !important;
   vertical-align: middle !important;
@@ -45,7 +41,6 @@ const ArrowDiv = Styled.div`
   transition-duration: 250ms !important;
   transition-timing-function: ease-in-out !important;
 `;
-
 const ButtonInLineStyle = {
   height: '10px',
   width: '10px',
