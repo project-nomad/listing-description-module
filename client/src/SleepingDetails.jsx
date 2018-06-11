@@ -1,46 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-const Div1wt9k7hn = Styled.div`
-  color: #484848 !important;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  margin: 0px !important;
-  word-wrap: break-word !important;
-  font-size: 16px !important;
-  line-height: 22px !important;
-  letter-spacing: normal !important;
-  font-weight: 800 !important;
-  -webkit-font-smoothing: antialiased;
-`;
-const Div6htn2u = Styled.div`
-  position: relative !important;
-  z-index: 0 !important;
-  box-sizing: border-box;
-  display: block;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #484848;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-`;
-const Div11iocrd2 = Styled.div`
-  margin-top: 0px !important;
-  margin-left: -8px !important;
-  margin-right: -8px !important;
-  overflow: hidden !important;
-  box-sizing: border-box;
-  display: block;
-`;
-const Div1w8hgual = Styled.div`
-  margin-bottom: 0px !important;
-  padding: 0px !important;
-  overflow: visible !important;
-  white-space: nowrap !important;
-  display: flex !important;
-  transition: -ms-transform 0.5s, -webkit-transform 0.5s, transform 0.5s !important;
-  box-sizing: border-box;
-`;
 const Div1johmo39 = Styled.div`
   width: 33.333333333333336% !important;
   display: inline-block !important;
@@ -101,18 +61,8 @@ const Span14tkmhr = Styled.div`
   box-sizing: border-box;
   display: inline-block !important;
 `;
-const H21xu9tpch = Styled.h2`
-  color: inherit !important;
-  font-size: 1em !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  margin: 0px !important;
-  padding: 0px !important;
-  display: inline !important;
-`;
 
 const getTypeOfBed = (type) => {
-  // some code
   if (type !== 'Sofa') {
     return <Span14tkmhr id='14tkmhr'>
               <svg id='king' viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style={{ height: '24px', width: '24px', fill: 'currentcolor' }}>
@@ -135,24 +85,34 @@ const renderBeds = (noOfBeds, type) => {
   for (let i = 0; i < noOfBeds; i += 1) {
     render.push(getTypeOfBed(type));
   }
-  console.log('render', render)
   return render;
 };
 
-const SleepingDetails = props => (
-  <Div1johmo39>
-    <Div699th3t>
-      <Div1ocrz96>
-        <Div152qbzi aria-hidden="true">
-          {renderBeds(props.details.noOfBeds, props.details.typeOfBed).map((bed) => {
-            return bed;
-          })}
-        </Div152qbzi>
-        <Div157yfd15>{props.details.roomName} {props.idx + 1}</Div157yfd15>
-        <Div1fcn46ls>{props.details.noOfBeds} {props.details.typeOfBed} Bed</Div1fcn46ls>
-      </Div1ocrz96>
-    </Div699th3t>
-  </Div1johmo39>
-);
+class SleepingDetails extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      master: 0,
+      bedroom: 0,
+      common: 0,
+    };
+  }
+
+  render() {
+    return (
+      <Div1johmo39>
+        <Div699th3t>
+          <Div1ocrz96>
+            <Div152qbzi aria-hidden="true">
+              {renderBeds(this.props.details.noOfBeds, this.props.details.typeOfBed).map(bed => bed)}
+            </Div152qbzi>
+            <Div157yfd15>{this.props.details.roomName} {this.props.idx + 1}</Div157yfd15>
+            <Div1fcn46ls>{this.props.details.noOfBeds} {this.props.details.typeOfBed} Bed</Div1fcn46ls>
+          </Div1ocrz96>
+        </Div699th3t>
+      </Div1johmo39>
+    );
+  }
+}
 
 export default SleepingDetails;
