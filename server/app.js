@@ -5,10 +5,10 @@ const db = require('../database/index.js');
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use('/listings/:id', express.static(path.resolve(__dirname, '../public')));
 app.use(bodyParser.json());
 
-app.get('/overview/listingId/:listingId', (req, res) => {
+app.get('/listings/:listingId/overview', (req, res) => {
   db.getListingOverview(req.params.listingId, (err, results) => {
     if (err) {
       res.status(500);
@@ -18,7 +18,7 @@ app.get('/overview/listingId/:listingId', (req, res) => {
   });
 });
 
-app.get('/sleepingdetails/listingId/:listingId', (req, res) => {
+app.get('/listings/:listingId/arrangements', (req, res) => {
   db.getSleepingDetails(req.params.listingId, (err, results) => {
     if (err) {
       res.status(500);
