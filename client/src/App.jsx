@@ -22,6 +22,8 @@ const Div1kzvqab3 = Styled.div`
 const Div76irmj = Styled.div`
   border-bottom: 1px solid #DBDBDB !important;
 `;
+const listingId = window.location.pathname.split('/')[2];
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -47,7 +49,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/overview/listingId/1')
+    axios.get(`/listings/${listingId}/overview`)
       .then((results) => {
         const loc = results.data[0].neighborhood;
         const ln = results.data[0].listingName;
@@ -87,7 +89,7 @@ class App extends React.Component {
       .catch((error) => {
         throw error;
       });
-    axios.get('/sleepingdetails/listingId/1')
+    axios.get(`/listings/${listingId}/arrangements`)
       .then((results) => {
         const sleep = results.data;
         this.setState({
