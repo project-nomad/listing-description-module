@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 
 const P = Styled.p`
@@ -24,7 +25,7 @@ const Span = Styled.span`
   -webkit-font-smoothing: antialiased;
 `;
 
-const InteractionWithGuests = (props) => (
+const Section2 = (props) => (
   <div dir='ltr'>
     <P>
       <Span>
@@ -34,4 +35,8 @@ const InteractionWithGuests = (props) => (
   </div>
 );
 
-export default InteractionWithGuests;
+export default Section2;
+
+Section2.propTypes = {
+  ltr: PropTypes.string.isRequired,
+};

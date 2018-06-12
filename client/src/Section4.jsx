@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 
 const P = Styled.p`
@@ -24,7 +25,7 @@ const Span = Styled.span`
   -webkit-font-smoothing: antialiased;
 `;
 
-const TheSpace = (props) => (
+const Section4 = (props) => (
   <div dir='ltr'>
     <P>
       <Span>
@@ -34,4 +35,8 @@ const TheSpace = (props) => (
   </div>
 );
 
-export default TheSpace;
+export default Section4;
+
+Section4.propTypes = {
+  ltr: PropTypes.string.isRequired,
+};
