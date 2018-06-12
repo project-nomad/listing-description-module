@@ -7,7 +7,7 @@ import Section3 from './Section3.jsx';
 import Section4 from './Section4.jsx';
 import HideButton from './HideButton.jsx';
 
-const Span_okqgdgp = Styled.span`
+const Spanokqgdgp = Styled.span`
   font-weight: 600 !important;
   color: #484848 !important;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
@@ -19,7 +19,7 @@ const Span_okqgdgp = Styled.span`
   display: inline !important;
   box-sizing: border-box;
   `;
-const Button_b82bweu = Styled.button`
+const Buttonb82bweu = Styled.button`
   color: #008489 !important;
   font: inherit !important;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
@@ -143,11 +143,11 @@ class Overview extends React.Component {
         </div>
         <div>
           <div style={{ marginTop: '24px' }}>
-             <Span_okqgdgp>
-                <Button_b82bweu>
+             <Spanokqgdgp>
+                <Buttonb82bweu>
                   <span>Contact Host</span>
-                </Button_b82bweu>
-            </Span_okqgdgp>
+                </Buttonb82bweu>
+            </Spanokqgdgp>
           </div>
         </div>
       </div>

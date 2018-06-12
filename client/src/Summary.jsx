@@ -1,6 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 
+
 const Div2h22gn = Styled.div`
   margin-left: -8px !important;
   margin-right: -8px !important;
@@ -190,8 +191,8 @@ const Summary = props => (
               <DivTextCenterMuted>
                 <div style={{ marginBottom: '6px' }}>
                   <Div1ij6gln6 style={{ height: '64px', width: '64px', display: 'block' }} >
-                    <Button110nrr2 ariaLabel="Laskarina User Profile" ariaBusy="false">
-                      <Img12r18es className="12r18es" src="https://a0.muscache.com/im/pictures/32e97880-2cfb-430c-9ec0-faeb28be8612.jpg?akipolicy=profilexmedium" height="64" width="64" alt="Laskarina User Profile" title="Laskarina User Profile"/>
+                    <Button110nrr2 ariaLabel="Generic User Profile" ariaBusy="false">
+                      <Img12r18es className="12r18es" src="https://a0.muscache.com/im/users/25111185/profile_pic/1420876435/original.jpg?aki_policy=profile_x_medium" height="64" width="64" alt="Generic User Profile" title="Generic User Profile"/>
                     </Button110nrr2>
                   </Div1ij6gln6>
                 </div>

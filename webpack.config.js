@@ -11,8 +11,16 @@ module.exports = {
           loader: 'babel-loader',
           query: {
             presets: ['env', 'react']
-          }
+          },
         },
+      },
+      {
+        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
       },
     ],
   },

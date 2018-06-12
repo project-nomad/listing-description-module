@@ -109,14 +109,14 @@ class SleepingArrangements extends React.Component {
     this.setState(prevState => ({
       leftClicksAvail: prevState.leftClicksAvail - 1,
       rightClicksAvail: prevState.rightClicksAvail + 1,
-      scrollSize: prevState.scrollSize + 33.3333
+      scrollSize: prevState.scrollSize + 33.3333,
     }));
   }
   rightClick() {
     this.setState(prevState => ({
       rightClicksAvail: prevState.rightClicksAvail - 1,
       leftClicksAvail: prevState.leftClicksAvail + 1,
-      scrollSize: prevState.scrollSize - 33.3333
+      scrollSize: prevState.scrollSize - 33.3333,
     }));
   }
 
@@ -184,6 +184,6 @@ class SleepingArrangements extends React.Component {
       </div>
     );
   }
-} 
+}
 
 export default SleepingArrangements;
