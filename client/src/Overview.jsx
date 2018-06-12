@@ -7,6 +7,33 @@ import Section3 from './Section3.jsx';
 import Section4 from './Section4.jsx';
 import HideButton from './HideButton.jsx';
 
+const Span_okqgdgp = Styled.span`
+  font-weight: 600 !important;
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: normal !important;
+  display: inline !important;
+  box-sizing: border-box;
+  `;
+const Button_b82bweu = Styled.button`
+  color: #008489 !important;
+  font: inherit !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  text-decoration: none !important;
+  -webkit-appearance: none !important;
+  -webkit-font-smoothing: antialiased;
+  background: transparent !important;
+  border: 0px !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  user-select: auto !important;
+  text-align: left !important;
+  `;
 const SumDiv = Styled.div`
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
@@ -14,22 +41,23 @@ const SumDiv = Styled.div`
   color: #484848;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-`;
+  `;
 const MainDiv = Styled.div`
   transform: translateY(0px) !important;
   opacity: 1 !important;
   transition: -ms-transform 304ms ease-out, -webkit-transform 304ms ease-out, transform 304ms ease-out, opacity 304ms ease-out !important;
-`;
+  `;
 const Div = Styled.div`
-    font-weight: 600 !important;
-    color: #484848 !important;
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-    margin: 0px !important;
-    word-wrap: break-word !important;
-    font-size: 16px !important;
-    line-height: 22px !important;
-    letter-spacing: normal !important;
-`;
+  font-weight: 600 !important;
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: normal !important;
+ `;
+
 const ButtonInLineStyle = {
   marginTop: '8px',
   marginBottom: '24px',
@@ -54,7 +82,7 @@ class Overview extends React.Component {
     return (
       <div id="details">
         <SumDiv className='the-intro'>
-          {this.props.summary}
+          {this.props.intro}
         </SumDiv>
         <div style={{ marginTop: '16px' }}>
           <MainDiv style={{ display: this.state.display ? 'block' : 'none' }} >
@@ -113,6 +141,15 @@ class Overview extends React.Component {
         <div>
           <HideButton style={ButtonInLineStyle} hideOverview={this.hideOverview}/>
         </div>
+        <div>
+          <div style={{ marginTop: '24px' }}>
+             <Span_okqgdgp>
+                <Button_b82bweu>
+                  <span>Contact Host</span>
+                </Button_b82bweu>
+            </Span_okqgdgp>
+          </div>
+        </div>
       </div>
     );
   }
@@ -121,7 +158,6 @@ class Overview extends React.Component {
 export default Overview;
 
 Overview.propTypes = {
-  summary: PropTypes.array.isRequired,
   section1: PropTypes.array.isRequired,
   section2: PropTypes.array.isRequired,
   section3: PropTypes.array.isRequired,

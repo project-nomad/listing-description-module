@@ -11,4 +11,7 @@ module.exports = {
   'plugins': [
       'react', 'jest'
   ],
+  'rules': {
+    'react/jsx-uses-vars': 2,
+  }
 };
