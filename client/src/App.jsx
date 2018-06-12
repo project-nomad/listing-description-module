@@ -22,7 +22,6 @@ const Div1kzvqab3 = Styled.div`
 const Div76irmj = Styled.div`
   border-bottom: 1px solid #DBDBDB !important;
 `;
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +40,10 @@ class App extends React.Component {
       ba: '',
       gs: '',
       sleep: [],
+      roomTally: 0,
+      rightClicksAvailable: 0,
     };
+    this.tallyUpRoomCounts = this.tallyUpRoomCounts.bind(this);
   }
 
   componentDidMount() {
@@ -90,10 +92,21 @@ class App extends React.Component {
         const sleep = results.data;
         this.setState({
           sleep,
+        }, () => {
+          this.tallyUpRoomCounts();
         });
       });
   }
-
+  tallyUpRoomCounts() {
+    let tally = 0;
+    for (let i = 0; i < this.state.sleep.length; i += 1) {
+      tally += 1;
+    }
+    this.setState({
+      roomTally: tally,
+      rightClicksAvailable: (tally - 3) < 0 ? 0 : (tally - 3),
+    });
+  }
   render() {
     return (
       <Div2h22gn className='2h22gn'>
@@ -138,6 +151,8 @@ class App extends React.Component {
               {/* Sleeping Arrangements */}
               <SleepingArrangements
                 sleep={this.state.sleep}
+                roomTally={this.state.roomTally}
+                rightClicksAvailable={this.state.rightClicksAvailable}
               />
             </div>
             {/* dividing line */}
