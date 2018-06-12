@@ -4,6 +4,9 @@
 /database
 /images
 
+## Webpack ##
+bundle-description.js
+
 ## NPM ##
 npm
 npm-debug.log
