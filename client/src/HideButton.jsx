@@ -36,45 +36,47 @@ const TblDiv = Styled.div`
 const TblCellDiv = Styled.div`
   display: table-cell !important;
   vertical-align: middle !important;
-`
+`;
+
 const ArrowDiv = Styled.div`
   display: table-cell !important;
   vertical-align: middle !important;
   transition-property: -ms-transform,-webkit-transform,transform !important;
   transition-duration: 250ms !important;
   transition-timing-function: ease-in-out !important;
-`
+`;
+
 const ButtonInLineStyle = {
   height: '10px',
   width: '10px',
   display: 'block',
-  fill: 'currentColor'
-}
+  fill: 'currentColor',
+};
 
 class HideButton extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       expanded: false,
-      arrow: {transform: [{rotate: '0deg'}]}
+      arrow: { transform: 'rotate(0deg)' },
     };
     this.clickHandler = this.clickHandler.bind(this);
   }
-  
+
   clickHandler() {
-    let expandedState = this.state.expanded
-    let arrowDegree = expandedState === false ? {transform: 'rotate(180deg)'} : {transform: 'rotate(0deg)'} 
+    const expandedState = this.state.expanded;
+    const arrowDegree = !expandedState ? { transform: 'rotate(180deg)' } : { transform: 'rotate(0deg)' };
     this.setState({
       expanded: !expandedState,
-      arrow: arrowDegree
+      arrow: arrowDegree,
     }, () => {
       this.props.hideOverview();
-    })
+    });
   }
 
-  render(){
-    return(
-      <div style={{marginTop: '8px', marginBottom: '24px'}}>
+  render() {
+    return (
+      <div style={{ marginTop: '8px', marginBottom: '24px' }}>
         <MainDiv>
           <Button type="button" aria-expanded={this.state.expanded} aria-busy="false" onClick={this.clickHandler}>
             <TblDiv>
@@ -82,7 +84,7 @@ class HideButton extends React.Component {
                 <span>{this.state.expanded ? 'Hide' : 'Read more about the space' }</span>
               </TblCellDiv>
               <TblCellDiv>
-                <div style={{marginLeft: '8px'}}>
+                <div style={{ marginLeft: '8px' }}>
                   <ArrowDiv style={this.state.arrow}>
                     <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style={ButtonInLineStyle}>
                       <path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fillRule="evenodd"></path>
@@ -94,7 +96,7 @@ class HideButton extends React.Component {
           </Button>
         </MainDiv>
       </div>
-    )
+    );
   }
 }
 
