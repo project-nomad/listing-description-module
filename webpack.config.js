@@ -17,7 +17,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle-description.js',
     path: path.join(__dirname, 'public'),
   },
 };
