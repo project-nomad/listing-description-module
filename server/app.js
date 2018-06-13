@@ -5,6 +5,7 @@ const db = require('../database/index.js');
 
 const app = express();
 
+app.use('/', express.static(path.join(__dirname, '/../public')));
 app.use('/listings/:id', express.static(path.resolve(__dirname, '../public')));
 app.use(bodyParser.json());
 
@@ -13,6 +14,7 @@ app.get('/listings/:listingId/overview', (req, res) => {
     if (err) {
       res.status(500);
     } else {
+      res.header('Access-Control-Allow-Origin', '*');
       res.send(results);
     }
   });
@@ -23,6 +25,7 @@ app.get('/listings/:listingId/arrangements', (req, res) => {
     if (err) {
       res.status(500);
     } else {
+      res.header('Access-Control-Allow-Origin', '*');
       res.send(results);
     }
   });
