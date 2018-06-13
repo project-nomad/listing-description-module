@@ -7,11 +7,10 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          query: {
-            presets: ['env', 'react']
-          }
+        loader: 'babel-loader',
+        options: {
+          presets: ['env', 'react'],
+          plugins: ['babel-plugin-styled-components'],
         },
       },
     ],
