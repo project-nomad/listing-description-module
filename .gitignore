@@ -1,7 +1,6 @@
 ## MAC files ##
 .DS_Store
 /node_modules
-/database
 /images
 
 ## Webpack ##
