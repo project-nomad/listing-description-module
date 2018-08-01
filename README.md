@@ -2,7 +2,7 @@
 
 > Front End capstone project mocking a semi-functional Airbnb replica website.
 
-![alt text](https://imgur.com/a/2ZZe6Rp)
+https://imgur.com/a/2ZZe6Rp
 
 ## Related Projects
 
