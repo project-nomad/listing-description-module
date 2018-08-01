@@ -2,6 +2,8 @@
 
 > Front End capstone project mocking a semi-functional Airbnb replica website.
 
+![alt text](https://imgur.com/a/2ZZe6Rp)
+
 ## Related Projects
 
   - https://github.com/teamName/repo
